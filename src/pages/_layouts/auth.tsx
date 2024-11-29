@@ -16,7 +16,9 @@ export function AuthLayout() {
         <img src={backgroundImage} className="w-full" alt="" />
       </div>
 
-      <Outlet />
+      <div className="m-6 flex flex-col justify-between rounded-[32px] bg-white px-20 py-[72px]">
+        <Outlet />
+      </div>
     </div>
   )
 }

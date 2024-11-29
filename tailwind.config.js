@@ -22,7 +22,7 @@ export default {
           dark: 'var(--blue-dark)',
         },
         white: 'var(--white)',
-        background: 'hsl(var(--background))',
+        background: 'var(--background)',
         shape: 'var(--shape)',
         customGray: {
           100: 'var(--gray-100)',

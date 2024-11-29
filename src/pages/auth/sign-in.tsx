@@ -11,7 +11,7 @@ import { Label } from '@/components/ui/label'
 
 export function SignIn() {
   return (
-    <div className="m-6 flex flex-col justify-between rounded-[32px] bg-white px-20 py-[72px]">
+    <>
       <div>
         <header className="flex flex-col gap-2">
           <h1 className="font-title text-customGray-500 text-2xl font-bold leading-[1.2]">
@@ -79,6 +79,6 @@ export function SignIn() {
           <ArrowRight02Icon />
         </Button>
       </footer>
-    </div>
+    </>
   )
 }
