@@ -5,7 +5,7 @@ import logoImage from '@/assets/logo.svg'
 
 export function AuthLayout() {
   return (
-    <div className="grid-cols-auth mx-auto grid min-h-screen w-full max-w-[1366px]">
+    <div className="grid-cols-auth mx-auto grid h-screen w-full max-w-[1366px] overflow-hidden">
       <div>
         <img
           className="m-10"
@@ -16,7 +16,7 @@ export function AuthLayout() {
         <img src={backgroundImage} className="w-full" alt="" />
       </div>
 
-      <div className="m-6 flex flex-col justify-between rounded-[32px] bg-white px-20 py-[72px]">
+      <div className="scrollbar-none m-6 flex flex-col justify-between overflow-y-auto rounded-[32px] bg-white px-20 py-[72px]">
         <Outlet />
       </div>
     </div>

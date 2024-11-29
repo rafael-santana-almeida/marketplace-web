@@ -4,6 +4,7 @@ import {
   Mail02Icon,
   ViewIcon,
 } from 'hugeicons-react'
+import { Link } from 'react-router-dom'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -23,39 +24,41 @@ export function SignIn() {
         </header>
 
         <form className="mt-12 flex flex-col">
-          <div>
+          <div className="group relative">
             <Label
-              className="font-text text-customGray-300 text-xs font-medium uppercase leading-[1.2]"
+              className="font-text text-customGray-300 group-focus-within:text-orange-base text-xs font-medium uppercase leading-[1.2]"
               htmlFor="email"
             >
               E-mail
             </Label>
 
             <div className="relative">
-              <Mail02Icon className="text-customGray-200 absolute left-[2px] top-1/2 -translate-y-1/2 transform" />
               <Input
                 id="email"
+                type="email"
                 placeholder="Seu e-mail cadastrado"
-                className="pl-[34px]"
+                className="group-focus-within:caret-orange-base peer pl-[34px]"
               />
+              <Mail02Icon className="group-focus-within:text-orange-base peer-[:not(:placeholder-shown)]:text-orange-base text-customGray-200 absolute left-[2px] top-1/2 -translate-y-1/2 transform" />
             </div>
           </div>
 
-          <div className="mt-5">
+          <div className="group relative mt-5">
             <Label
-              className="font-text text-customGray-300 text-xs font-medium uppercase leading-[1.2]"
+              className="group-focus-within:text-orange-base font-text text-customGray-300 text-xs font-medium uppercase leading-[1.2]"
               htmlFor="password"
             >
               Senha
             </Label>
 
             <div className="relative">
-              <AccessIcon className="text-customGray-200 absolute left-[2px] top-1/2 -translate-y-1/2 transform" />
               <Input
                 id="password"
                 placeholder="Sua senha de acesso"
-                className="pl-[34px]"
+                className="group-focus-within:caret-orange-base peer pl-[34px]"
+                type="password"
               />
+              <AccessIcon className="peer-[:not(:placeholder-shown)]:text-orange-base text-customGray-200 group-focus-within:text-orange-base absolute left-[2px] top-1/2 -translate-y-1/2 transform" />
               <ViewIcon className="text-customGray-200 absolute right-[2px] top-1/2 -translate-y-1/2 transform" />
             </div>
           </div>
@@ -73,10 +76,13 @@ export function SignIn() {
         </span>
         <Button
           variant="outline"
+          asChild
           className="font-text flex justify-between leading-[1.2]"
         >
-          Cadastrar
-          <ArrowRight02Icon />
+          <Link to="/sign-up">
+            Cadastrar
+            <ArrowRight02Icon />
+          </Link>
         </Button>
       </footer>
     </>
