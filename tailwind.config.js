@@ -7,10 +7,13 @@ export default {
       title: 'var(--font-dm-sans)',
       text: 'var(--font-poppins)',
     },
-    gridTemplateColumns: {
-      auth: '1fr minmax(611px, auto)',
-    },
     extend: {
+      gridTemplateColumns: {
+        auth: '1fr minmax(611px, auto)',
+      },
+      boxShadow: {
+        select: '0 2px 24px 0 var(--shape)',
+      },
       colors: {
         orange: {
           base: 'var(--orange-base)',

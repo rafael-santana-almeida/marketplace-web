@@ -1,4 +1,5 @@
 import { ChartHistogramIcon, PackageIcon, PlusSignIcon } from 'hugeicons-react'
+import { Link } from 'react-router-dom'
 
 import logoImage from '@/assets/logo.svg'
 import { Button } from '@/components/ui/button'
@@ -21,9 +22,11 @@ export function Header() {
       </nav>
 
       <div className="flex items-center gap-4">
-        <Button className="h-10">
-          <PlusSignIcon />
-          Novo produto
+        <Button className="h-10" asChild>
+          <Link to="new-product">
+            <PlusSignIcon />
+            Novo produto
+          </Link>
         </Button>
 
         <img

@@ -2,7 +2,7 @@ import {
   AccessIcon,
   ArrowRight02Icon,
   CallIcon,
-  ImageUploadIcon,
+  ImageDownload02Icon,
   Mail02Icon,
   UserIcon,
   ViewIcon,
@@ -37,7 +37,7 @@ export function SignUp() {
                 htmlFor="profile-image"
                 className="bg-shape group relative flex h-[7.5rem] w-[7.5rem] items-center justify-center rounded-xl hover:bg-black hover:opacity-60"
               >
-                <ImageUploadIcon className="text-orange-base h-8 w-8 group-hover:text-white" />
+                <ImageDownload02Icon className="text-orange-base h-8 w-8 group-hover:text-white" />
               </label>
               <input id="profile-image" type="file" className="hidden" />
             </div>
