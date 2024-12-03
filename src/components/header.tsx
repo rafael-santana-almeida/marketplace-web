@@ -6,18 +6,23 @@ import { Button } from '@/components/ui/button'
 
 export function Header() {
   return (
-    <header className="border-shape flex w-full items-center justify-between border-b-[1px] px-5 py-2.5">
+    <header className="flex w-full items-center justify-between border-b-[1px] border-shape px-5 py-2.5">
       <img src={logoImage} alt="" />
 
       <nav className="flex gap-2">
-        <Button className="bg-shape text-orange-base h-10 hover:text-white">
+        <Button className="h-10 bg-shape text-orange-base hover:text-white">
           <ChartHistogramIcon />
           Dashboard
         </Button>
 
-        <Button className="text-customGray-300 hover:text-customGray-300 h-10 bg-transparent font-normal hover:bg-transparent">
-          <PackageIcon />
-          Produtos
+        <Button
+          asChild
+          className="h-10 bg-transparent font-normal text-customGray-300 hover:bg-transparent hover:text-customGray-300"
+        >
+          <Link to="products">
+            <PackageIcon />
+            Produtos
+          </Link>
         </Button>
       </nav>
 

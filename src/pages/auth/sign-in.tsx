@@ -15,10 +15,10 @@ export function SignIn() {
     <>
       <div>
         <header className="flex flex-col gap-2">
-          <h1 className="font-title text-customGray-500 text-2xl font-bold leading-[1.2]">
+          <h1 className="font-title text-2xl font-bold leading-[1.2] text-customGray-500">
             Acesse sua conta
           </h1>
-          <span className="font-text text-customGray-300 text-sm leading-[1.2]">
+          <span className="font-text text-sm leading-[1.2] text-customGray-300">
             Informe seu e-mail e senha para entrar
           </span>
         </header>
@@ -26,7 +26,7 @@ export function SignIn() {
         <form className="mt-12 flex flex-col">
           <div className="group relative">
             <Label
-              className="font-text text-customGray-300 group-focus-within:text-orange-base text-xs font-medium uppercase leading-[1.2]"
+              className="font-text text-xs font-medium uppercase leading-[1.2] text-customGray-300 group-focus-within:text-orange-base"
               htmlFor="email"
             >
               E-mail
@@ -37,15 +37,15 @@ export function SignIn() {
                 id="email"
                 type="email"
                 placeholder="Seu e-mail cadastrado"
-                className="group-focus-within:caret-orange-base peer pl-[34px]"
+                className="peer pl-[34px] group-focus-within:caret-orange-base"
               />
-              <Mail02Icon className="group-focus-within:text-orange-base peer-[:not(:placeholder-shown)]:text-orange-base text-customGray-200 absolute left-[2px] top-1/2 -translate-y-1/2 transform" />
+              <Mail02Icon className="absolute left-[2px] top-1/2 -translate-y-1/2 transform text-customGray-200 group-focus-within:text-orange-base peer-[:not(:placeholder-shown)]:text-orange-base" />
             </div>
           </div>
 
           <div className="group relative mt-5">
             <Label
-              className="group-focus-within:text-orange-base font-text text-customGray-300 text-xs font-medium uppercase leading-[1.2]"
+              className="font-text text-xs font-medium uppercase leading-[1.2] text-customGray-300 group-focus-within:text-orange-base"
               htmlFor="password"
             >
               Senha
@@ -55,11 +55,11 @@ export function SignIn() {
               <Input
                 id="password"
                 placeholder="Sua senha de acesso"
-                className="group-focus-within:caret-orange-base peer pl-[34px]"
+                className="peer pl-[34px] group-focus-within:caret-orange-base"
                 type="password"
               />
-              <AccessIcon className="peer-[:not(:placeholder-shown)]:text-orange-base text-customGray-200 group-focus-within:text-orange-base absolute left-[2px] top-1/2 -translate-y-1/2 transform" />
-              <ViewIcon className="text-customGray-200 absolute right-[2px] top-1/2 -translate-y-1/2 transform" />
+              <AccessIcon className="absolute left-[2px] top-1/2 -translate-y-1/2 transform text-customGray-200 group-focus-within:text-orange-base peer-[:not(:placeholder-shown)]:text-orange-base" />
+              <ViewIcon className="absolute right-[2px] top-1/2 -translate-y-1/2 transform text-customGray-200" />
             </div>
           </div>
 
@@ -71,13 +71,13 @@ export function SignIn() {
       </div>
 
       <footer className="mt-auto flex flex-col gap-5">
-        <span className="font-text text-customGray-300 text-base font-normal leading-[1.2]">
+        <span className="font-text text-base font-normal leading-[1.2] text-customGray-300">
           Ainda não tem uma conta?
         </span>
         <Button
           variant="outline"
           asChild
-          className="font-text flex justify-between leading-[1.2]"
+          className="flex justify-between font-text leading-[1.2]"
         >
           <Link to="/sign-up">
             Cadastrar
